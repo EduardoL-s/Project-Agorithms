@@ -9,9 +9,8 @@ def test_encrypt_message():
 
     assert encrypt_message('testando', 10) == 'odnatset'
 
-    with pytest.raises(TypeError,
-                        match="tipo inválido para key"):
-            encrypt_message('testando', 'dois')
-    with pytest.raises(TypeError,
-                        match="tipo inválido para message"):
-            encrypt_message(['testando'], 2)
+    with pytest.raises(TypeError, match="tipo inválido para key"):
+        encrypt_message('testando', 'dois')
+    with pytest.raises(TypeError, match="tipo inválido para message"):
+        encrypt_message(['testando'], 2)
+    
