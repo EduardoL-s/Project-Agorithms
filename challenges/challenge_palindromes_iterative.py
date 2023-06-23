@@ -4,6 +4,6 @@ def is_palindrome_iterative(word):
     invertWord = reversed(word)
     newWord = "".join(invertWord)
 
-    if(word == newWord):
+    if (word == newWord):
         return True
     return False
