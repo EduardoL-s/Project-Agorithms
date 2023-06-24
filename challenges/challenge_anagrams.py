@@ -5,19 +5,18 @@ def quickSort(array, low_index, high_index):
         quickSort(array, p + 1, high_index)
 
 
-def partition(array, lowIndex, highIndex):
-    pivot = array[highIndex]
-    delimiter = lowIndex - 1
+def partition(arr, lowIndex, highIndex):
+    pivot = arr[highIndex]
+    limiter = lowIndex - 1
 
     for index in range(lowIndex, highIndex):
-        if array[index] <= pivot:
-            delimiter = delimiter + 1
-            array[index], array[delimiter] = array[delimiter], array[index]
+        if arr[index] <= pivot:
+            limiter = limiter + 1
+            arr[index], arr[limiter] = arr[limiter], arr[index]
 
-    array[delimiter + 1], array[highIndex] = array[highIndex],
-    array[delimiter + 1]
+    arr[limiter + 1],arr[highIndex] = arr[highIndex],arr[limiter + 1]
 
-    return delimiter + 1
+    return limiter + 1
 
 
 def is_anagram(first_string, second_string):
