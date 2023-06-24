@@ -14,7 +14,7 @@ def partition(arr, lowIndex, highIndex):
             limiter = limiter + 1
             arr[index], arr[limiter] = arr[limiter], arr[index]
 
-    arr[limiter + 1],arr[highIndex] = arr[highIndex],arr[limiter + 1]
+    arr[limiter + 1], arr[highIndex] = arr[highIndex], arr[limiter + 1]
 
     return limiter + 1
 
